@@ -1,5 +1,6 @@
 var currentQuestion = 0;
 var score = 0;
+var questionNumber = 0;
 var totQuestions = questions.length;
 
 var container = document.getElementById('quizContainer');
@@ -12,6 +13,9 @@ var nextButton = document.getElementById('nextButton');
 var resultCont = document.getElementById('result');
 
 function loadQuestion (questionIndex) {
+	questionNumber = questionIndex+1;
+	document.getElementById('quesNum').innerHTML = questionNumber;
+	console.log(questionNumber);
 	var q = questions[questionIndex];
 
 	questionEl.textContent = (questionIndex + 1) + '. ' + q.question;
