@@ -2,15 +2,22 @@
 <html>
 
 	<head>
-		<title>Quiz</title>
+		<title>Kronos Quiz WebApp</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<!-- <script type="text/javascript" src="data.js"></script> -->
+	<script type="text/javascript" src="dialogue.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 		<link href="index.css" rel="stylesheet">
 	</head>
 
-
+ 
 	<body>
+		<div id="freezeLayer" class="freeze-layer" style="display:none;">
+			<h1 id="welcomeH">Welcome </h1><br><br>
 		<div id="quizContainer" class="container">
-			<div class="title">Computer Quiz</div>
+			<div class="title">Kronos Quiz &nbsp;&nbsp;&nbsp;question : <span id="quesNum"></span></div>
 		
 			<div id="question" class="question"></div>
 			
@@ -39,6 +46,42 @@
 		
 		<div id="result" class="container result" style="display:none;">
 		</div>
+		</div>
+
+		<!-- custome dialogue code start -->
+
+		<div id="dialogCont" class="dlg-container">
+<h1>Welcome to Kronos quiz!!</h1>
+  <div class="dlg-header">
+    Heyy , we want to know your good name.
+  </div>
+  
+  <div id="dlgBody" class="dlg-body">
+    
+    <form id="regForm">
+ 		<input type="text" name="fname" placeholder="enter your name">
+ 			<br>
+    	<input type="text" name="lname" placeholder="enter your official  email">
+    		<br>
+        
+
+	    <div class="dlg-footer">
+	        <!-- <input type="submit" value="Submit" onclick="CustomConfirm.submit();"> -->
+	    	<a onclick="CustomConfirm.cancel();">
+    		  Submit
+    		</a>
+	    </div>
+		
+    </form> 
+ 
+
+  </div>
+
+</div>
+
+
+		<!-- custome dialogue code ends -->
+
 
 		<!-- javascript links -->
 		<script src="question.js" type="c335b2fdef39883c0a0d12ca-text/javascript"></script>
